@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <title>DOOM Quiz</title>
+  </head>
+  <body>
+    <!-- Background video for the webpage, set to autoplay, loop, and muted -->
+    <video
+      src="./styles/spark-loop.mp4"
+      width="100%"
+      autoplay
+      loop
+      muted
+      class="flames"
+    ></video>
+    <!-- Main content section -->
+    <section class="wrap">
+      <!-- Heading displaying the welcome message -->
+      <h1 class="welcome">Welcome to Doom Quiz</h1>
+      <!-- Start button with animation class -->
+      <button
+        class="welcome-button animate__animated animate__infinite"
+        id="welcome-button"
+      >
+        START
+      </button>
+      <!-- Paragraph displaying a catchy phrase -->
+      <p id="quote">Answer correctly or get doomed!</p>
+      <!-- Div for displaying the rank of players -->
+      <div class="rank" id="rank"></div>
+    </section>
+    <!-- Link to the JavaScript file, using type="module" for ES6 module support
+      which can do export and import for modularization -->
+    <script type="module" src="./scripts/index.js"></script>
+  </body>
+</html>

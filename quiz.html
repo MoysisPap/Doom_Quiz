@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/quiz.css" />
+    <title>DOOM Quiz</title>
+  </head>
+  <body>
+    <!-- Section for displaying quiz questions -->
+    <section class="quiz" id="quiz"></section>
+    <!-- Form for submitting the player's name and displaying the score -->
+    <form id="form-name">
+      <!-- Prompt for the player's name -->
+      What is your name?
+      <input id="Name" type="text" autocomplete="off" />
+      <!-- Display of the player's score -->
+      <div id="score">You got: <span id="score__yours"></span> out of 10</div>
+      <!-- Restriction notice -->
+      <p id="restriction">* Score bellow 3 won't be displayed</p>
+      <!-- Button to submit the score -->
+      <button id="ScoreBtn">Result</button>
+    </form>
+    <!-- Link to the JavaScript file for the quiz functionality -->
+    <script type="module" src="./scripts/quiz.js"></script>
+  </body>
+</html>

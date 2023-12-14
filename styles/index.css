@@ -1,0 +1,132 @@
+/* Importing reset.css to apply the base styles */
+@import url("./reset.css");
+
+/* Root pseudo-class for defining CSS variables */
+:root {
+  --primary-bg: linear-gradient(to right, #000000, #7f0000);
+  /* Darkened gradient background - black to dark red */
+  --secondary-bg: #3d0000;
+  /* Slightly darker secondary background color - dark red */
+  --accent-color: #ff4500;
+  /* Accent color - red-orange */
+  --text-color: #ffffff;
+  /* Text color - white */
+  --input-bg: #6b1a00;
+  /* Input background color - dark red/brown */
+  --input-border: #4c1200;
+  /* Input border color - slightly lighter than input background */
+  --box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  /* Box shadow for an elevated look */
+}
+
+/* Styling for the body element */
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 2rem;
+  font-family: alice;
+
+  display: grid;
+  place-items: center;
+  color: var(--text-color);
+  background: var(--primary-bg);
+}
+
+/* Styling for the background video and main content wrapper */
+.flames,
+.wrap {
+  position: fixed;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.flames {
+  opacity: 0.4;
+  object-fit: cover;
+}
+
+/* Flexbox layout for the wrap class */
+.wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Styling for welcome message */
+.welcome {
+  padding-top: 115px;
+  font-size: 5rem;
+  color: var(--text-color);
+}
+
+/* Styling for the start button */
+.welcome-button {
+  padding: 40px 70px;
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  text-decoration: none;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1.8rem;
+}
+
+/* Hover effect for the start button */
+.welcome-button:hover {
+  background-color: #be3301;
+}
+
+/* Flexbox layout for the rank display */
+.rank {
+  display: flex;
+  flex-direction: row;
+  height: 20rem;
+  gap: 2rem;
+  align-items: flex-end;
+}
+
+/* Styling for individual rank bars */
+.rank__bar {
+  position: relative;
+  width: 5rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.3rem;
+  color: var(--text-color);
+  background-color: var(--accent-color);
+  box-shadow: var(--box-shadow);
+}
+
+/* Pseudo-element for displaying player names on rank bars */
+.rank__bar::before {
+  content: attr(owner);
+  position: absolute;
+  top: 0;
+  width: 200%;
+  rotate: -45deg;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+/* Responsive styles for smaller screen sizes */
+@media (max-width: 430px) {
+  .welcome {
+    font-size: 2rem;
+    font-family: sans-serif;
+    text-align: center;
+  }
+
+  body {
+    font-size: 1.5rem;
+    font-family: sans-serif;
+    text-align: center;
+  }
+
+  button {
+    font-family: sans-serif;
+  }
+}
